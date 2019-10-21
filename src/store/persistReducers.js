@@ -4,7 +4,7 @@ import { persistReducer } from 'redux-persist';
 export default reducers => {
   const persistedReducer = persistReducer(
     {
-      key: 'gobarber',
+      key: 'go_barber_react_native',
       storage: AsyncStorage,
       whitelist: ['auth', 'user'],
     },

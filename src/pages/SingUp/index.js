@@ -1,5 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Image } from 'react-native';
+
+import { signUpRequest } from '../../store/modules/auth/actions';
 import Background from '../../components/Background';
 
 import logo from '../../assets/logo.png';
@@ -14,10 +17,18 @@ import {
 } from './styles';
 
 export default function SignUp({ navigation }) {
+  const dispatch = useDispatch();
+
   const passwordRef = useRef();
   const emailRef = useRef();
 
-  function handleSubmit() {}
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  function handleSubmit() {
+    dispatch(signUpRequest(name, email, password));
+  }
 
   return (
     <Background>
@@ -32,6 +43,8 @@ export default function SignUp({ navigation }) {
             placeholder="Your name"
             returnKeyType="next"
             onSubmitEditing={() => emailRef.current.focus()}
+            value={name}
+            onChangeText={setName}
           />
           <FormInput
             icon="mail-outline"
@@ -42,6 +55,8 @@ export default function SignUp({ navigation }) {
             ref={emailRef}
             returnKeyType="next"
             onSubmitEditing={() => passwordRef.current.focus()}
+            value={email}
+            onChangeText={setEmail}
           />
           <FormInput
             icon="lock-outline"
@@ -50,6 +65,8 @@ export default function SignUp({ navigation }) {
             ref={passwordRef}
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
+            value={password}
+            onChangeText={setPassword}
           />
 
           <SubmitButton onPress={handleSubmit}>
