@@ -4,15 +4,19 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Container, Left, Avatar, Name, Time, Info } from './styles';
 
-export default function Appointment() {
+export default function Appointment({ data }) {
   return (
     <Container>
       <Left>
         <Avatar
-          source={{ uri: 'https://api.adorable.io/avatar/50/gobarber.png' }}
+          source={{
+            uri: data.provider.avatar
+              ? data.provider.avatar.url
+              : `https://api.adorable.io/avatar/50/${data.provider.name}.png`,
+          }}
         />
         <Info>
-          <Name>Michael Jordan</Name>
+          <Name>{data.provider.name}</Name>
           <Time>2 hours</Time>
         </Info>
       </Left>
