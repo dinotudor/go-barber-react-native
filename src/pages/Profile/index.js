@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Background from '../../components/Background';
@@ -14,6 +15,8 @@ import {
 // import { FormInput, SubmitButton } from '../SignIn/styles';
 
 export default function Profile() {
+  // const profile = useSelector()
+
   const emailRef = useRef();
   const oldPasswordRef = useRef();
   const passwordRef = useRef();
@@ -63,7 +66,7 @@ export default function Profile() {
             placeholder="Current Password"
             ref={oldPasswordRef}
             returnKeyType="next"
-            onSubmitEditing={() => confirmPasswordRef.current.focus()}
+            onSubmitEditing={() => passwordRef.current.focus()}
             value={oldPassword}
             onChangeText={setOldPassword}
           />
@@ -73,7 +76,7 @@ export default function Profile() {
             placeholder="Type new password"
             ref={passwordRef}
             returnKeyType="next"
-            onSubmitEditing={() => passwordRef.current.focus()}
+            onSubmitEditing={() => confirmPasswordRef.current.focus()}
             value={password}
             onChangeText={setPassword}
           />
