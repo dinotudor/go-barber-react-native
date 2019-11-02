@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Background from '../../components/Background';
+import { updateProfileRequest } from '../../store/modules/user/actions';
 
 import {
   Container,
@@ -12,23 +13,33 @@ import {
   FormInput,
   SubmitButton,
 } from './styles';
-// import { FormInput, SubmitButton } from '../SignIn/styles';
 
 export default function Profile() {
-  // const profile = useSelector()
+  const dispatch = useDispatch();
+  const profile = useSelector(state => state.user.profile);
 
   const emailRef = useRef();
   const oldPasswordRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState(profile.name);
+  const [email, setEmail] = useState(profile.email);
   const [oldPassword, setOldPassword] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  function handleSubmit() {}
+  function handleSubmit() {
+    dispatch(
+      updateProfileRequest({
+        name,
+        email,
+        oldPassword,
+        password,
+        confirmPassword,
+      })
+    );
+  }
 
   return (
     <Background>
