@@ -1,6 +1,9 @@
+import React from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SingUp';
@@ -29,6 +32,10 @@ export default (isSigned = false) =>
                 SelectDateTime,
                 Confirm,
               }),
+              navigationOptions: {
+                tabBarVisible: false,
+                tabBarLabel: 'Schedule',
+              },
             },
             Profile,
           },
