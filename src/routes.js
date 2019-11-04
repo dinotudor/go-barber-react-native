@@ -1,10 +1,9 @@
-import React from 'react-native';
+import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SingUp';
 
@@ -35,6 +34,13 @@ export default (isSigned = false) =>
               navigationOptions: {
                 tabBarVisible: false,
                 tabBarLabel: 'Schedule',
+                tabBarIcon: (
+                  <Icon
+                    name="add-circle-outline"
+                    size={20}
+                    color="rgba(255, 255, 255, 0.6)"
+                  />
+                ),
               },
             },
             Profile,
