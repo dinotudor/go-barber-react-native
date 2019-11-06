@@ -33,10 +33,10 @@ export default function SelectProvider() {
                 source={{
                   uri: provider.avatar
                     ? provider.avatar.url
-                    : `http://apiadorable.io/avatar/50/${data.provider.name}`,
+                    : `http://apiadorable.io/avatar/50/${provider.name}.png`,
                 }}
               />
-              <Name>{item.name}</Name>
+              <Name>{provider.name}</Name>
             </Provider>
           )}
         />
