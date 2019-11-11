@@ -3,11 +3,18 @@ import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Background from '../../../components/Background';
+import DateTimeInput from '../../../components/DateTimeInput';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 export default function SelectDateTime() {
-  return <Background />;
+  return (
+    <Background>
+      <Container>
+        <DateTimeInput />
+      </Container>
+    </Background>
+  );
 }
 
 SelectDateTime.navigationOptions = ({ navigation }) => ({
