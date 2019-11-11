@@ -3,6 +3,6 @@ import { View } from 'react-native';
 
 // import { Container } from './styles';
 
-export default function DateTimeInput() {
+export default function DateInput() {
   return <View />;
 }
