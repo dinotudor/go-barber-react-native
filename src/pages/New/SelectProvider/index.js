@@ -12,13 +12,13 @@ export default function SelectProvider() {
   const [providers, setProviders] = useState([]);
 
   useEffect(() => {
-    async function loadProvider() {
+    async function loadProviders() {
       const response = await api.get('providers');
 
       setProviders(response.data);
     }
 
-    loadProvider();
+    loadProviders();
   }, []);
 
   return (
