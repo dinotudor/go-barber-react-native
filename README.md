@@ -10,6 +10,10 @@ _- Make an appointment:_
 _- See all appointments:_
 _- Cancel an appointment:_
 
-##### create using:
+#### create using:
 
 `npx react-native init`
+
+#### connect with RestAPI
+
+`NodeJS API, using Postgres DB to store user, appointments and avatar. Mongo DB for sending confirmation email to provider for each appointment`
