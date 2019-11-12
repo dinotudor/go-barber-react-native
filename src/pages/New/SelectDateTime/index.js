@@ -7,7 +7,7 @@ import api from '../../../services/api';
 import Background from '../../../components/Background';
 import DateInput from '../../../components/DateInput';
 
-import { Container } from './styles';
+import { Container, HourList, Hour, Title } from './styles';
 
 export default function SelectDateTime({ navigation }) {
   const [date, setDate] = useState(new Date());
@@ -33,6 +33,15 @@ export default function SelectDateTime({ navigation }) {
     <Background>
       <Container>
         <DateInput date={date} onChange={setDate} />
+        <HourList
+          date={hours}
+          keyExtractor={item => item.time}
+          renderItem={({ item }) => (
+            <Hour onPress={() => {}} enabled={item.available}>
+              <Title>{item.time}</Title>
+            </Hour>
+          )}
+        />
       </Container>
     </Background>
   );
