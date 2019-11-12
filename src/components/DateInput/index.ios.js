@@ -20,17 +20,17 @@ export default function DateInput({ date, onChange }) {
       <DateButton onPress={() => setOpened(!opened)}>
         <Icon name="event" color="#fff" size={20} />
         <DateText>{dateFormatted}</DateText>
-        {opened && (
-          <DatePickerIOS
-            date={date}
-            onDateChange={onChange}
-            minimumDate={new Date()}
-            minuteInterval={60}
-            locale="pt"
-            mode="date"
-          />
-        )}
       </DateButton>
+      {opened && (
+        <DatePickerIOS
+          date={date}
+          onDateChange={onChange}
+          minimumDate={new Date()}
+          minuteInterval={60}
+          locale="pt"
+          mode="date"
+        />
+      )}
     </Container>
   );
 }
