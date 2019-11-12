@@ -2,8 +2,9 @@ import React, { useMemo } from 'react';
 import { formatRelative, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import { TouchableOpacity } from 'react-native';
-
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import api from '../../../services/api';
 
 import Background from '../../../components/Background';
 
@@ -18,6 +19,14 @@ export default function Confirm({ navigation }) {
     [time]
   );
 
+  async function handleAppointment() {
+    await api.post('appointments', {
+      provider_id: provider.id,
+      date: time,
+    });
+    navigation.navigate('Dashboard');
+  }
+
   return (
     <Background>
       <Container>
@@ -30,7 +39,9 @@ export default function Confirm({ navigation }) {
         />
         <Name>{provider.name}</Name>
         <Time>{dateFormatted}</Time>
-        <SubmitButton onPress={() => {}}>Confirm schedule</SubmitButton>
+        <SubmitButton onPress={handleAppointment}>
+          Confirm schedule
+        </SubmitButton>
       </Container>
     </Background>
   );
