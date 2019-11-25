@@ -2,13 +2,13 @@
 
 _Fictional app to make an appointment with a barber - Rocketseat bootcamp - module 10_
 
-_- Pages/ services:_
-_- Sign In:_
-_- Sign Up:_
-_- See open slots with different service provider avaialable:_
-_- Make an appointment:_
-_- See all appointments:_
-_- Cancel an appointment:_
+_- Pages/ services:_</br>
+_- Sign In:_</br>
+_- Sign Up:_</br>
+_- See open slots with different service provider avaialable:_</br>
+_- Make an appointment:_</br>
+_- See all appointments:_</br>
+_- Cancel an appointment:_</br>
 
 #### create using:
 
