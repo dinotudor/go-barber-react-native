@@ -32,3 +32,21 @@ clone de repo then:
 
 LOGIN:
 ![login](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/login.png)
+
+ERROR MESSAGES AND VALIDATION:
+![validation](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/validation.png)
+
+EDIT PROFILE:
+![edit-profile](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/editprofile.png)
+
+DASHBOARD:
+![dasjboard](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/dashboard.png)
+
+SELECT PROVIDER:
+![select-provider](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/selectprovider.png)
+
+SELECT DATE:
+![select-date](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/selectdate.png)
+
+CONFIRM APPOINTMENT:
+![confirm](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/confirm.png)
