@@ -24,29 +24,29 @@ https://github.com/dinotudor/gobarber-backend
 
 clone de repo then:
 
-`cd gobarber-backend`
-`yarn` - install dependencies
-`yarn dev` - run server on localhost
+`cd gobarber-backend` </br>
+`yarn` - install dependencies </br>
+`yarn dev` - run server on localhost </br>
 
 #### Screen Shots:
 
-LOGIN:
+LOGIN: </br>
 ![login](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/login.png)
 
-ERROR MESSAGES AND VALIDATION:
+ERROR MESSAGES AND VALIDATION: </br>
 ![validation](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/validation.png)
 
-EDIT PROFILE:
+EDIT PROFILE: </br>
 ![edit-profile](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/editprofile.png)
 
-DASHBOARD:
+DASHBOARD: </br>
 ![dasjboard](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/dashboard.png)
 
-SELECT PROVIDER:
+SELECT PROVIDER: </br>
 ![select-provider](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/selectprovider.png)
 
-SELECT DATE:
+SELECT DATE: </br>
 ![select-date](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/selectdate.png)
 
-CONFIRM APPOINTMENT:
+CONFIRM APPOINTMENT: </br>
 ![confirm](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/confirm.png)
