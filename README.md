@@ -16,4 +16,19 @@ _- Cancel an appointment:_
 
 #### connect with RestAPI
 
-`NodeJS API, using Postgres DB to store user, appointments and avatar. Mongo DB for sending confirmation email to provider for each appointment`
+_NodeJS API, using Postgres DB to store user, appointments and avatar. Mongo DB for sending confirmation email to provider for each appointment_
+
+repository for back-end:
+
+https://github.com/dinotudor/gobarber-backend
+
+clone de repo then:
+
+`cd gobarber-backend`
+`yarn` - install dependencies
+`yarn dev` - run server on localhost
+
+#### Screen Shots:
+
+LOGIN:
+![login](https://github.com/dinotudor/go-barber-react-native/blob/master/src/assets/login.png)
